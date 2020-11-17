@@ -1,0 +1,32 @@
+/* ---------- COLOR VARS ---------- */
+/* ADMIN-INDEX */
+.table-ap {
+  width: 100%;
+  border: 1px solid #eee; }
+  .table-ap .table-ap-head {
+    padding: 10px;
+    text-align: left;
+    color: #292929;
+    font-size: 16px;
+    font-family: "RalewaySemiBold";
+    border: 1px solid #eee; }
+  .table-ap .table-ap-value {
+    padding: 10px;
+    height: 40px;
+    font-size: 15px;
+    font-family: "RalewayLight";
+    border: 1px solid #eee; }
+
+/* ADD NEWS */
+.add_news_form > button {
+  float: right; }
+
+.acc_edit_form > label {
+  margin-right: 10px; }
+
+.acc_edit_form > button {
+  margin-top: 20px; }
+
+.acc-edit-input {
+  width: 60%;
+  margin-bottom: 0px; }

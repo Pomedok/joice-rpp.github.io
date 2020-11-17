@@ -1,0 +1,680 @@
+/* ---------- COLOR VARS ---------- */
+body {
+  background: #f0f0f0;
+  color: #333;
+  font-family: "RalewayRegular";
+  font-size: 14px;
+  font-weight: normal; }
+
+input {
+  outline: none; }
+
+a, button, .item-block {
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out; }
+
+  
+  #wrap{
+    display: none;
+    opacity: 0.8;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 16px;
+    background-color: rgba(1, 1, 1, 0.725);
+    z-index: 100;
+    overflow: auto;
+  }
+  
+  #okn{
+    width: 900px;
+    height: 620px;
+    margin: 50px auto;
+    display: none;
+    background: #fff;
+    z-index: 200;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 16px;
+    border-radius:10px;
+  }
+  
+  .close{
+    margin-left: 364px;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+  
+
+
+.pagination {
+    margin-left:40%;
+    padding-top:15px; 
+
+}
+.pagination div {
+    text-align: center;
+    float: left;
+    margin: 0 20px 0 0; /* отступ справа */
+}
+.pagination div button {
+    padding-top: 2px; /* сдвигаем сверху, чтобы background выглядел  правильно */
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: none;
+    border: none;
+}
+.pagination .prev button, .pagination .next a {
+    /* убираем влияние width:25px из правила .pagination div a */
+    width: auto; 
+}
+.pagination div button:hover, .pagination div button.active {
+    color: white;
+    /* задний фон для текущий страницы и для наведения */
+    background: url('../img/select.png') 0 0 no-repeat;
+}
+.pagination .prev button:hover, .pagination .next button:hover {
+    width: auto; /* автоматическая ширина */
+    color: #1982d1;
+    -webkit-transition:all 0.6s ease-in-out;
+    transition:all 0.6s ease-in-out;
+    background: none; /*  убираем задний фон при наведении */
+}
+.clear {
+  clear: both; }
+
+/* =================================================== */
+/* ================= GLOBAL ELEMENTS ================= */
+/* =================================================== */
+/* PRELOADER */
+.loader {
+  background: none repeat scroll 0 0 #ffffff;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999; }
+
+.loader_inner {
+  background-image: url("../img/preloader.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-posirion: center center;
+  background-color: #fff;
+  height: 200px;
+  width: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  left: 50%;
+  top: 50%;
+  position: absolute; }
+
+/* SECTION-TITLE (INDEX) */
+.title h1 {
+  text-align: center;
+  font-size: 18px;
+  font-family: "RalewaySemiBold"; }
+
+.title-bottom-line {
+  margin: 0 auto;
+  margin-top: -5px;
+  width: 120px;
+  height: 5px;
+  background: #212121; }
+
+.title-inverse h1 {
+  text-align: center;
+  font-size: 18px;
+  font-family: "RalewaySemiBold";
+  color: #fff; }
+
+.title-bottom-line-inverse {
+  margin: 0 auto;
+  margin-top: -5px;
+  width: 120px;
+  height: 5px;
+  background: #fff; }
+
+/* PAGE TITLE (ALL PAGE) */
+.page-title h1 {
+  margin-top: 30px;
+  font-size: 25px;
+  font-family: "RalewayExtraLight"; }
+  .page-title h1 .bold {
+    font-family: "RalewayBold"; }
+
+.page-title-bottom-line {
+  width: 150px;
+  height: 5px;
+  margin-top: -15px;
+  background: #212121; }
+
+/* BUTTON STYLE */
+.btn-sub {
+  padding: 10px 45px;
+  background: #ff394c;
+  color: #fff;
+  font-size: 13px;
+  border: none;
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+  outline: none; }
+  .btn-sub:hover {
+    background: #e53f4f; }
+
+.main-btn {
+  padding: 4px 45px;
+  background: #ff394c;
+  border: 2px solid #ff394c;
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  outline: none; }
+  .main-btn:hover {
+    background: transparent;
+    border: 2px solid #fff; }
+
+.inverse {
+  background-color: transparent;
+  border: 2px solid #fff;
+  outline: none; }
+  .inverse:hover {
+    background: #ff394c;
+    border: 2px solid #ff394c; }
+
+/* INNER BLOCKS */
+.inner-content-block {
+  background: #fff; }
+
+.title-inner-block {
+  background: #fff;
+  padding: 25px;
+  border-bottom: 1px solid #eee; }
+  .title-inner-block > h1 {
+    font-size: 16px;
+    font-family: "RalewaySemiBold"; }
+
+.content-inner-block {
+  background: #fff;
+  padding: 25px;
+  overflow-y: scroll;
+  border-bottom: 1px solid #eee; }
+
+.inner-no-scroll {
+  overflow: hidden; }
+
+.mt-inner {
+  margin-top: 30px; }
+
+.fixed-h {
+  height: 312px; }
+
+.fixed-h-2 {
+  height: 265px; }
+
+/* TABLE STYLE (2 col) (CABINET) */
+.table-2-col {
+  width: 100%; }
+  .table-2-col .table-2-item {
+    height: 40px;
+    width: 80%;
+    color: #5f5f5f;
+    font-size: 16px;
+    font-family: "RalewaySemiBold"; }
+  .table-2-col .table-2-value {
+    height: 40px;
+    width: 20%;
+    font-size: 16px;
+    font-family: "RalewayExtraLight"; }
+
+/* TABLE STYLE (3 col) (CABINET) */
+.table-3-col {
+  width: 100%; }
+  .table-3-col .table-3-item {
+    height: 40px;
+    width: 50%;
+    color: #5f5f5f;
+    font-size: 16px;
+    font-family: "RalewaySemiBold"; }
+  .table-3-col .table-3-value1 {
+    height: 40px;
+    width: 30%;
+    font-size: 16px;
+    font-family: "RalewayExtraLight"; }
+  .table-3-col .table-3-value12 {
+    height: 40px;
+    width: 40%;
+    font-size: 16px;
+    font-family: "RalewayExtraLight"; }
+
+/* TABLE PLAYERS (LEADER PANEL) */
+.table-players {
+  width: 100%; }
+  .table-players .table-players-head {
+    text-align: left;
+    color: #292929;
+    font-size: 16px;
+    font-family: "RalewaySemiBold"; }
+  .table-players .table-players-item {
+    height: 40px;
+    width: 40%;
+    color: #5f5f5f;
+    font-size: 15px;
+    font-family: "RalewayLight"; }
+  .table-players .table-players-value {
+    height: 40px;
+    width: 30%;
+    font-size: 15px;
+    font-family: "RalewayLight"; }
+  .table-players .table-players-controll {
+    height: 40px;
+    width: 30%;
+    font-size: 15px;
+    font-family: "RalewayLight"; }
+   .table-players button {
+    background: none;
+    border: none; }
+
+/* TABLE MONITORING */
+.table-mon {
+  width: 100%; }
+  .table-mon .table-mon-head {
+    text-align: left;
+    color: #292929;
+    font-size: 16px;
+    font-family: "RalewaySemiBold"; }
+  .table-mon .table-mon-value {
+    height: 40px;
+    width: 30%;
+    font-size: 15px;
+    font-family: "RalewayLight"; }
+
+/* FORM INPUT STYLE */
+.inner-input {
+  width: 100%;
+  height: 35px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  margin-bottom: 20px; }
+
+.inner-textarea {
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  margin-bottom: 20px; }
+
+/* HEADER-LINE (ALL PAGES) */
+.section-header-line {
+  height: 60px;
+  background: #121212;
+  color: #fff; }
+  .section-header-line .logo {
+    margin-top: 15px; }
+    .section-header-line .logo .icon-logo {
+      font-size: 20px;
+      margin-right: 10px; }
+    .section-header-line .logo .text-logo {
+      margin-left: -60px; }
+  .section-header-line .navigate {
+    float: right; }
+    .section-header-line .navigate > ul {
+      list-style: none; }
+      .section-header-line .navigate > ul > li {
+        margin-top: 5px;
+        float: left; }
+        .section-header-line .navigate > ul > li > a {
+          color: #fff;
+          font-size: 13px;
+          text-decoration: none;
+          padding: 15px; }
+          .section-header-line .navigate > ul > li > a:hover {
+            background: #ff394c;
+            -webkit-border-radius: 40px;
+                    border-radius: 40px; }
+            .section-header-line .navigate  button {
+            background: none;
+            border:none; }
+           .section-header-line .navigate  button:hover {
+            background: #ff394c;
+            -webkit-border-radius: 40px;
+            padding:3px;
+                    border-radius: 40px; }
+/* */
+.info {
+    color: #ff394c;
+    font-size: 13px;
+    font-weight: bold;
+    -webkit-border-radius: 40px;
+    border-radius: 10px;
+    outline: none;
+}
+/* FOOTER (ALL PAGES) */
+.section-footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: url("../img/footer-bg.jpg") no-repeat;
+  background-size: cover; }
+  .section-footer .information {
+    margin-top: 50px; }
+    .section-footer .information > h3 {
+      color: #fff;
+      font-size: 14px;
+      font-family: "RalewaySemiBold"; }
+    .section-footer .information > p {
+      color: #fff;
+      font-size: 13px;
+      font-family: "RalewayExtraLight"; }
+  .section-footer .navigate-footer {
+    margin-top: 55px;
+    float: right; }
+    .section-footer .navigate-footer > ul {
+      list-style: none; }
+      .section-footer .navigate-footer > ul > li {
+        margin-top: 5px;
+        float: left; }
+        .section-footer .navigate-footer > ul > li > a {
+          color: #fff;
+          font-size: 13px;
+          text-decoration: none;
+          padding: 15px; }
+          .section-footer .navigate-footer > ul > li > a:hover {
+            background: #ff394c;
+            -webkit-border-radius: 40px;
+                    border-radius: 40px; }
+
+/* =================================================== */
+/* ============== GLOBAL ELEMENTS [END] ============== */
+/* =================================================== */
+/*--------------------------------------------*/
+/*---------------- INDEX.HTML ----------------*/
+/*--------------------------------------------*/
+.section-main-header {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  background: url("../img/header-bg.jpg") no-repeat;
+  background-size: cover; }
+  .section-main-header .header-content {
+    margin-top: 50px; }
+    .section-main-header .header-content .server-name h1 {
+      color: #fff;
+      font-size: 35px;
+      font-family: "RalewayExtraLight"; }
+    .section-main-header .header-content .server-info p {
+      color: #fff;
+      font-size: 14px;
+      font-family: "RalewayExtraLight";
+      line-height: 25px; }
+    .section-main-header .header-content .server-btn a {
+      margin-top: 20px;
+      margin-right: 10px;
+      display: inline-block; }
+
+.section-start-game {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background: url("../img/start-game-bg.jpg") no-repeat;
+  background-size: cover; }
+  .section-start-game .items-container {
+    margin-top: 60px;
+    margin-bottom: 60px; }
+    .section-start-game .items-container .item-block {
+      width: 230px;
+      height: 330px;
+      background: #ccc;
+      margin: 0 auto; }
+      .section-start-game .items-container .item-block:hover {
+        -webkit-box-shadow: 0 0 50px #ff394c;
+                box-shadow: 0 0 50px #ff394c; }
+    .section-start-game .items-container .item-img {
+      width: 230px;
+      height: 243px; }
+    .section-start-game .items-container .item-text {
+      width: 230px;
+      height: 120px;
+      background: #ff394c;
+      text-align: center;
+      color: #fff;
+      padding: 15px;
+      margin-bottom: 30px; }
+      .section-start-game .items-container .item-text > h1 {
+        margin-top: -3px;
+        font-size: 17px;
+        font-family: "RalewaySemiBold"; }
+      .section-start-game .items-container .item-text > p {
+        font-size: 14px;
+        font-family: "RalewaySemiBold"; }
+
+.section-about-us {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .section-about-us .server-desc p {
+    margin-top: 30px;
+    color: #838383;
+    line-height: 25px; }
+  .section-about-us .items-adv {
+    text-align: center;
+    margin-top: 80px; }
+    .section-about-us .items-adv .fa-adv {
+      font-size: 45px;
+      color: #ff394c; }
+    .section-about-us .items-adv .item-text h1 {
+      color: #292929;
+      font-size: 16px;
+      font-family: "RalewaySemiBold"; }
+    .section-about-us .items-adv .item-text {
+      font-family: "RalewayLight";
+      line-height: 25px; }
+
+.section-video {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: url("../img/video-bg.jpg") no-repeat;
+  background-size: cover; }
+  .section-video .video-block {
+    margin-top: 50px; }
+  .section-video .other-info p {
+    color: #fff;
+    line-height: 25px;
+    margin-top: 50px; }
+
+.section-servers {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .section-servers .servers {
+    margin-top: 50px; }
+    .section-servers .servers .server-block {
+      color: #fff;
+      background: #ff394c;
+      height: 80px;
+      text-align: center;
+      padding: 5px; }
+      .section-servers .servers .server-block .server-name h2 {
+        font-size: 16px;
+        font-family: "RalewaySemiBold"; }
+      .section-servers .servers .server-block .server-online h3 {
+        font-size: 14px;
+        font-family: "RalewayExtraLight";
+        margin-top: -10px; }
+
+/*--------------------------------------------*/
+/*---------------- NEWS.HTML -----------------*/
+/*--------------------------------------------*/
+.page-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100px; }
+
+.section-news {
+  margin-bottom: 30px; }
+  .section-news .news-container {
+    background: #fff;
+    margin-right:15%;
+    margin-left: 15%; 
+    margin-top: 30px; }
+    .section-news .news-container .title-news {
+      padding: 10px;
+      border-bottom: 1px solid #eee; }
+      .section-news .news-container .title-news > h1 {
+        font-size: 16px;
+        font-family: "RalewayBold"; }
+      .section-news .news-container .title-news > h2 {
+        color: #838383;
+        margin-top: -10px;
+        font-size: 14px;
+        font-family: "RalewayExtraLight"; }
+    .section-news .news-container .news-content {
+      color: #838383;
+      padding: 10px; }
+      .section-news .news-container .news-content > p {
+        margin-top: 20px; }
+    .section-news .news-container .news-btn > a {
+      margin-bottom: 10px;
+      float: right; }
+
+/*--------------------------------------------*/
+/*---------------- LOGIN.HTML ----------------*/
+/*--------------------------------------------*/
+.section-login {
+  margin-top: 30px;
+  margin-bottom: 180px; }
+  .section-login .login-info > h1 {
+    font-size: 16px;
+    font-family: "RalewayBold"; }
+  .section-login .login-info > p {
+    font-family: "RalewayLight"; }
+  .section-login .form-input {
+    outline: none;
+    border: none;
+    width: 100%;
+    background: transparent;
+    height: 40px;
+    border-bottom: 1px solid #a5a5a5; }
+  .section-login .btn-sub {
+    float: right;
+    border: none;
+    margin-top: 20px; }
+
+/*--------------------------------------------*/
+/*---------------- DONATE.HTML ---------------*/
+/*--------------------------------------------*/
+.section-donate {
+  margin-top: 30px;
+  margin-bottom: 180px; }
+  .section-donate .donate-info > h1 {
+    font-size: 16px;
+    font-family: "RalewayBold"; }
+  .section-donate .donate-info > p {
+    font-family: "RalewayLight"; }
+  .section-donate .form-input {
+    outline: none;
+    border: none;
+    width: 100%;
+    background: transparent;
+    height: 40px;
+    border-bottom: 1px solid #a5a5a5; }
+  .section-donate .btn-sub {
+    float: right;
+    border: none;
+    margin-top: 20px; }
+
+/*--------------------------------------------*/
+/*---------------- CABINET.HTML --------------*/
+/*--------------------------------------------*/
+.table-sub-info {
+  width: 100%; }
+
+.section-player-info {
+  margin-top: 50px; }
+  .section-player-info .main-player-info {
+    background: #fff;
+    height: auto; }
+    .section-player-info .main-player-info .top-block {
+      height: 150px;
+      padding: 25px;
+      border-bottom: 1px solid #eee; }
+      .section-player-info .main-player-info .top-block .avatar {
+        float: left;
+        width: 100px;
+        height: 100px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        background: #ccc; }
+        .avatar img {
+          border-radius: 30%;
+        }
+      .section-player-info .main-player-info .top-block .player-main {
+        float: left;
+        margin-left: 20px; }
+        .section-player-info .main-player-info .top-block .player-main .nick {
+          margin-top: 30px;
+          font-size: 16px;
+          font-family: "RalewaySemiBold";
+          text-transform: uppercase; }
+        .section-player-info .main-player-info .top-block .player-main .level {
+          color: #838383;
+          margin-top: -30px;
+          font-size: 14px;
+          font-family: "RalewayLight"; }
+    .section-player-info .main-player-info .main-info {
+      padding: 25px;
+      border-bottom: 1px solid #eee; }
+    .section-player-info .main-player-info .donate-info {
+      padding: 25px;
+      border-bottom: 1px solid #eee; }
+    .section-player-info .main-player-info .btn-group {
+      padding: 15px; }
+
+.player-skills {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .player-skills .skill-block {
+    background: #fff; }
+    .player-skills .skill-block .skill-item {
+      margin: 0 auto;
+      text-align: center; }
+      .player-skills .skill-block .skill-item > h1 {
+        font-size: 25px;
+        font-family: "RalewayBold"; }
+      .player-skills .skill-block .skill-item > h2 {
+        margin-top: -30px; }
+
+/*--------------------------------------------*/
+/*---------------- SETTINGS.HTML -------------*/
+/*--------------------------------------------*/
+.section-settings {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+/*--------------------------------------------*/
+/*-------------- LEADER_PANEL.HTML -----------*/
+/*--------------------------------------------*/
+.section-leader-panel {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .section-leader-panel .panel-block {
+    background: #fff; }
+
+/*--------------------------------------------*/
+/*-------------- MONITORING.HTML -------------*/
+/*--------------------------------------------*/
+.section-monitoring {
+  margin-top: 30px;
+  margin-bottom: 30px; }
